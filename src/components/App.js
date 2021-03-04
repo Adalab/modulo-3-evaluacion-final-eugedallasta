@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Filter from "./Filter";
-import Button from "./Button";
 import CardDetail from "./CardDetail";
 import List from "./List";
 import Footer from "./Footer";
@@ -21,7 +20,7 @@ const App = () => {
   const handleInputChange = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
-    } else if (inputChange === "gender") {
+    } else if (inputChange.key === "gender") {
       setGender(inputChange.value);
     }
   };
@@ -40,24 +39,30 @@ const App = () => {
 
   //Funcion Render CardDetail
   const renderDetail = (props) => {
-    const id = props.match.params.id;
+    const id = parseInt(props.match.params.id);
     const selectCharacter = characters.find((character) => {
       return character.id === id;
     });
     return <CardDetail character={selectCharacter} />;
   };
+  // Funcion Render Home
+  const renderHome = () => {
+    return (
+      <>
+       <Filter handleInputChange={handleInputChange} />
+        <List characters={filterCharacters} />
+      </>
+    )
 
+  }
   return (
     <>
       <Header />
       <main>
-        <Filter handleInputChange={handleInputChange} />
-        <List characters={filterCharacters} />
-        <Button />
-        <CardDetail />
       </main>
       <Footer />
       <Switch>
+        <Route exact path="/" render={renderHome}  />
         <Route path="/character/:id" render={renderDetail} />
       </Switch>
     </>

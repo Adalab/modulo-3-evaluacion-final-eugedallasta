@@ -9,9 +9,9 @@ function FilterByName(props) {
   };
 
   return (
-    <label>
+    <label className="main__form-label">
       <input
-        // className='add class'
+        className="main__form-input"
         placeholder="Ej. Rick Sanchez"
         onChange={handleChange}
         type="text"

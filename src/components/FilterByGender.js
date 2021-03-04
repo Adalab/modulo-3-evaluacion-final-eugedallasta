@@ -1,3 +1,5 @@
+import "../stylesheets/components/Filter.scss";
+
 const FilterByGender = (props) => {
   const handleChange = (ev) => {
     props.handleInputChange({
@@ -6,7 +8,7 @@ const FilterByGender = (props) => {
     });
   };
   return (
-    <label htmlFor="gender">
+    <label className="main__form-label" htmlFor="gender">
       Género:
       <select name="gender" id="gender" onChange={handleChange}>
         <option value="All">All</option>
