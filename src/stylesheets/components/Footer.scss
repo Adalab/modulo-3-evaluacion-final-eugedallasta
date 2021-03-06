@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #020200;
+  border-top: #04f3f3 1px solid;
+  padding: 10px 40px;
+  position: fixed;
+  bottom: 0px;
+  &__text {
+    margin-right: 5px;
+    color: #04f3f3;
+    font-family:#04f3f3;
+    font-weight: bold;
+  }
+  &__github {
+    padding: 5px;
+    &--icon {
+      color: #04f3f3;
+    }
+  }
+  &__twitter {
+    padding: 5px;
+    &--icon {
+      color: #04f3f3;
+    }
+  }
+  &__linkedin {
+    padding: 5px;
+    &--icon {
+      color: #04f3f3;
+    }
+  }
+}

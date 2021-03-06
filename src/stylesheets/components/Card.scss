@@ -9,16 +9,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #040505;
     border-radius: 10px;
     border: 4px solid #04f3f3;
     padding: 10px 0px;
     &Img {
-      width: 85%;
+    width: 85%;
+   margin-left:20px;
+      
     }
     &Name {
+      color:#04f3f3;
       text-align: center;
+    }
+    &Specie {
+      text-align: center;
+      color:#04f3f3;
     }
   }
 }

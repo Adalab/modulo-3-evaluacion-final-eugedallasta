@@ -10,9 +10,10 @@ function FilterByName(props) {
 
   return (
     <label className="main__form-label">
+      Filter by Name
       <input
         className="main__form-input"
-        placeholder="Ej. Rick Sanchez"
+        placeholder="Example: Rick Sanchez"
         onChange={handleChange}
         type="text"
         value={props.name}

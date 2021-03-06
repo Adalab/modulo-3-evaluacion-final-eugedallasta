@@ -9,7 +9,8 @@ const FilterByGender = (props) => {
   };
   return (
     <label className="main__form-label" htmlFor="gender">
-      Género:
+      and Gender
+      <br />
       <select name="gender" id="gender" onChange={handleChange}>
         <option value="All">All</option>
         <option value="Female">Female</option>

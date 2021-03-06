@@ -12,10 +12,10 @@ function Card(props) {
           title={`Foto de ${props.character.name}`}
         />
         <h2 className="main__list-articleName">
-          Nombre:{props.character.name}
+          Name: {props.character.name}
         </h2>
         <h3 className="main__list-articleSpecie">
-          Especie:{props.character.specie}
+          Specie: {props.character.specie}
         </h3>
       </Link>
     </article>
